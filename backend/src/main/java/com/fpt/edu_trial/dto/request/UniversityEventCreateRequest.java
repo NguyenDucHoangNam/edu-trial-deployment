@@ -1,0 +1,42 @@
+package com.fpt.edu_trial.dto.request;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class UniversityEventCreateRequest {
+
+    @NotBlank(message = "Tiêu đề sự kiện không được để trống")
+    @Size(max = 255, message = "Tiêu đề không được vượt quá 255 ký tự")
+    private String title;
+
+    @NotNull(message = "Ngày diễn ra sự kiện không được để trống")
+    @FutureOrPresent(message = "Ngày diễn ra sự kiện phải là hiện tại hoặc tương lai")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime date;
+
+    @Size(max = 2000, message = "Mô tả không được vượt quá 2000 ký tự")
+    private String description;
+
+    @NotBlank(message = "Địa điểm không được để trống")
+    @Size(max = 500, message = "Địa điểm không được vượt quá 500 ký tự")
+    private String location;
+
+    @Size(max = 500, message = "Link chi tiết không được vượt quá 500 ký tự")
+    private String link;
+
+    private MultipartFile imageFile;
+}

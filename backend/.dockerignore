@@ -1,0 +1,11 @@
+# Bỏ qua các kết quả build của Java/Maven/Gradle
+target/
+build/
+.gradle/
+
+# Bỏ qua các file log
+*.log
+
+# Bỏ qua các file của IDE
+.idea/
+*.iml

@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+
+  db-service:
+    image: mysql:8.0
+    ports:
+      - "3307:3306" 
+    container_name: mysql-db-container
+    command: '--default-authentication-plugin=mysql_native_password' 
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456 
+      MYSQL_DATABASE: melody_education 
+    volumes:
+      - db-data:/var/lib/mysql
+
+  backend-service:
+    build: ./backend 
+    container_name: spring-app-container
+    restart: unless-stopped
+    depends_on:
+      - db-service 
+    volumes:
+      - uploads:/uploads 
+    environment:
+      DB_URL: jdbc:mysql://db-service:3306/melody_education?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8
+      DB_USER: root
+      DB_PASS: 123456
+      UPLOAD_DIR: /uploads/
+      CLOUDINARY_CLOUD_NAME: dylefjptw 
+      CLOUDINARY_API_KEY: 256613252751575
+      CLOUDINARY_API_SECRET: LU_qhcFy4_l0ZP_V051UE7FRaGM
+      JWT_SECRET: E1hK9zR8wV3nJ6qB0sF7gD4pA2uL5oI3xW7yT9cZ0mP5kH8rU1eX4vO
+      JWT_EXPIRATION_MS: 86400000
+      ADMIN_EMAIL: admin@edutrial.com
+      ADMIN_PASS: 123456
+      MAIL_HOST: smtp.gmail.com
+      MAIL_PORT: 587
+      MAIL_USER: namndhde170725@fpt.edu.vn
+      MAIL_PASS: ozea moxr aktr lqmo
+
+  frontend-service:
+    build: ./frontend/frontend-edutrial
+    container_name: react-app-container
+    restart: unless-stopped
+
+  nginx-proxy:
+    image: nginx:alpine
+    container_name: nginx-proxy-container
+    restart: unless-stopped
+    ports:
+      - "80:80" 
+    volumes:
+      - ./nginx-proxy/nginx.conf:/etc/nginx/conf.d/default.conf 
+    depends_on:
+      - backend-service
+      - frontend-service
+
+volumes:
+  db-data: 
+  uploads: 

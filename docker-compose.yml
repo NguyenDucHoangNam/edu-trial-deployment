@@ -41,7 +41,7 @@ services:
       MAIL_PASS: ozea moxr aktr lqmo
 
   frontend-service:
-    build: ./frontend/frontend-edutrial
+    build: ./frontend
     container_name: react-app-container
     restart: unless-stopped
 

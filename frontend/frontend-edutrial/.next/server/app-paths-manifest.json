@@ -1,0 +1,10 @@
+{
+  "/page": "app/page.js",
+  "/danh-sach-truong/page": "app/danh-sach-truong/page.js",
+  "/chi-tiet-truong/[id]/page": "app/chi-tiet-truong/[id]/page.js",
+  "/hoc-thu/chi-tiet/[id]/page": "app/hoc-thu/chi-tiet/[id]/page.js",
+  "/tai-lieu-thptqg/page": "app/tai-lieu-thptqg/page.js",
+  "/tra-cuu-diem-chuan/page": "app/tra-cuu-diem-chuan/page.js",
+  "/khao-sat/page": "app/khao-sat/page.js",
+  "/cong-cu-tinh-diem-thpt/page": "app/cong-cu-tinh-diem-thpt/page.js"
+}

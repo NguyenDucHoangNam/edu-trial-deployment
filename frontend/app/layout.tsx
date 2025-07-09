@@ -22,17 +22,19 @@ export default function RootLayout({
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WQWLDR6Q');
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCSPQTRF');
+>>>>>>> 849ef95 (fix metric final)
           `}
         </Script>
       </head>
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WQWLDR6Q"
+
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WCSPQTRF"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}

@@ -3,6 +3,12 @@
 /backend/node_modules
 /frontend/node_modules
 
+<<<<<<< HEAD
+=======
+# Ignore all node_modules folders in any subdirectory
+**/node_modules/
+
+>>>>>>> 849ef95 (fix metric final)
 
 # Build output
 /target/

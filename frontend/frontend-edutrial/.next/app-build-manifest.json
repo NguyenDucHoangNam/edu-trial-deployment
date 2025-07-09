@@ -1,0 +1,53 @@
+{
+  "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/danh-sach-truong/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/danh-sach-truong/page.js"
+    ],
+    "/chi-tiet-truong/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/chi-tiet-truong/[id]/page.js"
+    ],
+    "/hoc-thu/chi-tiet/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/hoc-thu/chi-tiet/[id]/page.css",
+      "static/chunks/app/hoc-thu/chi-tiet/[id]/page.js"
+    ],
+    "/tai-lieu-thptqg/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/tai-lieu-thptqg/page.css",
+      "static/chunks/app/tai-lieu-thptqg/page.js"
+    ],
+    "/tra-cuu-diem-chuan/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/tra-cuu-diem-chuan/page.css",
+      "static/chunks/app/tra-cuu-diem-chuan/page.js"
+    ],
+    "/cong-cu-tinh-diem-thpt/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/cong-cu-tinh-diem-thpt/page.js"
+    ],
+    "/khao-sat/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/khao-sat/page.js"
+    ]
+  }
+}

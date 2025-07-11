@@ -1,6 +1,7 @@
 "use client";
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; import Footer from "@/components/Footer";
+import 'react-toastify/dist/ReactToastify.css';
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
@@ -22,18 +23,16 @@ export default function RootLayout({
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WCSPQTRF');
->>>>>>> 849ef95 (fix metric final)
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WCSPQTRF');
           `}
         </Script>
       </head>
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <noscript>
           <iframe
-
             src="https://www.googletagmanager.com/ns.html?id=GTM-WCSPQTRF"
             height="0"
             width="0"
@@ -45,8 +44,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <Header />
           <>
             <ToastContainer
-              position="top-right"        // 👈 Hiển thị góc phải trên
-              autoClose={5000}            // Tự tắt sau 3s
+              position="top-right"
+              autoClose={5000}
               hideProgressBar={false}
               newestOnTop={false}
               closeOnClick
@@ -54,8 +53,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               pauseOnFocusLoss
               draggable
               pauseOnHover
-              theme="light"              // Có thể đổi sang 'dark' nếu cần
-            />            {children}
+              theme="light"
+            />
+            {children}
           </>
           <Footer />
           <ScrollToTop />
